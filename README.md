@@ -1,5 +1,5 @@
 # Spideriment Web Search
-**Spideriment Web Search** is a proof-of-concept web app, which uses the Flask framework, acting like a **web frontend** for the [Spideriment Search Server](https://github.com/vitlabuda/spideriment_search_server). 
+**Spideriment Web Search** is a proof-of-concept **search engine** web app, which uses the Flask framework, acting like a web frontend for the [Spideriment Search Server](https://github.com/vitlabuda/spideriment_search_server). 
 It proxies search queries from web clients to the search server and displays returned search results. 
 
 ![Spideriment Web Search – Screenshot](screenshot.png)
@@ -33,6 +33,12 @@ It proxies search queries from web clients to the search server and displays ret
    ```
 
    To run the app in a production environment, [hook it to a web server](https://flask.palletsprojects.com/en/latest/deploying/) using an appropriate interface.
+
+
+
+## Related projects
+* **[Spideriment](https://github.com/vitlabuda/spideriment)** – web crawler (spider, indexer)
+* **[Spideriment Search Server](https://github.com/vitlabuda/spideriment_search_server)** – search server for use by frontends
 
 
 
