@@ -20,9 +20,9 @@ It proxies search queries from web clients to the search server and displays ret
 
 
 ### 3. Initialize the app's environment
-   The bash script [init_web_search.sh](src/init_web_search.sh) creates a virtual environment and downloads the necessary Python libraries:
+   The bash script [prepare_web_search.sh](src/prepare_web_search.sh) creates a virtual environment and downloads the necessary Python libraries:
    ```
-   ./init_web_search.sh
+   ./prepare_web_search.sh
    ```
 
 
