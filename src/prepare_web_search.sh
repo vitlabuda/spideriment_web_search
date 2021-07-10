@@ -23,14 +23,21 @@
 
 
 
+function exit_with_error() {
+  echo "ERROR: $1"
+  exit 1
+}
+
+
+
 # Traverse to the directory where this script is located
 cd -- "$(dirname -- "$0")" || exit_with_error "Failed to traverse into the script's directory"
 
 # Prepare the runtime environment
-if [ -d "./venv" ]; then
+if [ -d "./virtualenv" ]; then
   exit_with_error "The Python virtual environment is already prepared"
 else
-  python3 -m venv venv || exit_with_error "Failed to create Python virtual environment"
-  . ./venv/bin/activate || exit_with_error "Failed to activate Python virtual environment"
-  ./venv/bin/pip3 install -r requirements.txt || exit_with_error "Failed to install the required Python libraries"
+  virtualenv -p python3 virtualenv || exit_with_error "Failed to create Python virtual environment"
+  . ./virtualenv/bin/activate || exit_with_error "Failed to activate Python virtual environment"
+  ./virtualenv/bin/pip3 install -r requirements.txt || exit_with_error "Failed to install the required Python libraries"
 fi

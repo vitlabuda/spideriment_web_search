@@ -15,18 +15,26 @@ It proxies search queries from web clients to the search server and displays ret
    The program was tested in Python 3.7 (Debian 10) and Python 3.8 (Ubuntu 20.04).
 
 
-### 2. Change the configuration to fit your needs
+### 2. Install Python dependencies
+   On Debian/Ubuntu and their derivatives, execute the following:
+   ```
+   sudo apt update 
+   sudo apt install python3 python3-pip python3-venv python3-virtualenv virtualenv
+   ```
+
+
+### 3. Change the configuration to fit your needs
    The app's configuration can be changed in the **[Settings.py](src/Settings.py)** file.
 
 
-### 3. Initialize the app's environment
+### 4. Initialize the app's environment
    The bash script [prepare_web_search.sh](src/prepare_web_search.sh) creates a virtual environment and downloads the necessary Python libraries:
    ```
    ./prepare_web_search.sh
    ```
 
 
-### 4. Start the Flask app
+### 5. Start the Flask app
    To start the web app using the Flask's built-in development server, use the [run_debug_web_search.sh](src/run_debug_web_search.sh) bash script:
    ```
    ./run_debug_web_search.sh

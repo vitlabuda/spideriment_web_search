@@ -34,4 +34,4 @@ function exit_with_error() {
 cd -- "$(dirname -- "$0")" || exit_with_error "Failed to traverse into the script's directory"
 
 # Run the program
-FLASK_APP=./SpiderimentWebSearch.py ./venv/bin/python3 -m flask run
+FLASK_APP=./SpiderimentWebSearch.py ./virtualenv/bin/python3 -m flask run
