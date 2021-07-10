@@ -1,5 +1,6 @@
-{% include '_header.html' %}
+{% extends '_base.html' %}
 
+{% block content %}
 <hr>
 <hr>
 
@@ -7,5 +8,4 @@
     <h3>Error!</h3>
     <p>{{ error_message }}</p>
 </div>
-
-{% include '_footer.html' %}
+{% endblock %}

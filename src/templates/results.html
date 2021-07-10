@@ -1,11 +1,11 @@
-{% include '_header.html' %}
+{% extends '_base.html' %}
 
 
+{% block content %}
 <hr>
 <hr>
 
 {% if search_results %}
-
     <div id="search-results">
         {% for search_result in search_results %}
             <div class="search-result">
@@ -18,19 +18,15 @@
                     <span class="search-result-snippet">{{ search_result.snippet }}</span>
                     <span class="search-result-score">({{ search_result.score }})</span>
                 </div>
-            </div>
 
-            <hr>
+                <hr>
+            </div>
         {% endfor %}
     </div>
-
 {% else %}
-
     <div id="no-search-results">
         <p>No results found for query &apos;{{ search_query }}&apos;!</p>
     </div>
-
 {% endif %}
 
-
-{% include '_footer.html' %}
+{% endblock %}
