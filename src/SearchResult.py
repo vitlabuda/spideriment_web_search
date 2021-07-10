@@ -27,14 +27,6 @@ from Settings import Settings
 class SearchResult:
     def __init__(self, search_result_object: Dict[str, Any]):
         self.url: str = str(search_result_object["url"])
-
-        self.title: str = self._cut_string_if_needed(str(search_result_object["title"]), Settings.MAX_TITLE_DISPLAY_LENGTH)
-        self.snippet: str = self._cut_string_if_needed(str(search_result_object["snippet"]), Settings.MAX_SNIPPET_DISPLAY_LENGTH)
-
+        self.title: str = str(search_result_object["title"])
+        self.snippet: str = str(search_result_object["snippet"])
         self.score: float = float(search_result_object["score"])
-
-    def _cut_string_if_needed(self, string: str, max_length: int) -> str:
-        if len(string) > max_length:
-            string = (string[0:max_length] + "…")
-
-        return string

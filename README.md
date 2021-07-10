@@ -35,7 +35,7 @@ It proxies search queries from web clients to the search server and displays ret
 
 
 ### 5. Start the Flask app
-   To start the web app using the Flask's built-in development server, use the [run_debug_web_search.sh](src/run_debug_web_search.sh) bash script:
+   To start the web app using the Flask's built-in development server, use the [run_debug_web_search.sh](src/run_development_web_search.sh) bash script:
    ```
    ./run_debug_web_search.sh
    ```

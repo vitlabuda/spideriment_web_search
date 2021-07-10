@@ -21,7 +21,7 @@
 
 
 class Settings:
-    PROGRAM_VERSION: float = 1.2
+    PROGRAM_VERSION: float = 1.3
 
     SEARCH_SERVER_SOCKET_PATH: str = "../../spideriment_search_server/src/working_dir/spideriment_search_server.sock"
 

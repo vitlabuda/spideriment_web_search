@@ -2,6 +2,7 @@
 
 
 {% block content %}
+
 <hr>
 <hr>
 
@@ -11,11 +12,11 @@
             <div class="search-result">
                 <div>
                     <span class="search-result-number">{{ loop.index }}.</span>
-                    <a class="search-result-title" href="{{ search_result.url }}">{{ search_result.title }}</a>
+                    <a class="search-result-title" href="{{ search_result.url }}">{{ search_result.title|truncate(Settings.MAX_TITLE_DISPLAY_LENGTH) }}</a>
                 </div>
                 <div class="search-result-link">{{ search_result.url }}</div>
                 <div>
-                    <span class="search-result-snippet">{{ search_result.snippet }}</span>
+                    <span class="search-result-snippet">{{ search_result.snippet|truncate(Settings.MAX_SNIPPET_DISPLAY_LENGTH) }}</span>
                     <span class="search-result-score">({{ search_result.score }})</span>
                 </div>
 

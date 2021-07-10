@@ -32,6 +32,11 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 app = flask.Flask(__name__)
 
 
+@app.context_processor
+def inject_settings_to_jinja2_templates() -> dict:
+    return {"Settings": Settings}
+
+
 @app.route("/", methods=["GET"])
 def s_main_page():
     return flask.render_template("index.html",
