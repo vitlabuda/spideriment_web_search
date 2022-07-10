@@ -1,56 +1,18 @@
-# Spideriment Web Search
-**Spideriment Web Search** is a proof-of-concept **search engine** web app, which uses the Flask framework, acting like a web frontend for the [Spideriment Search Server](https://github.com/vitlabuda/spideriment_search_server). 
-It proxies search queries from web clients to the search server and displays returned search results. 
+# THIS PROJECT IS NO LONGER MAINTAINED
 
-![Spideriment Web Search – Screenshot](screenshot.png)
+Due to its limited flexibility and certain poor design decisions, the original
+_Spideriment_ project has been abandoned and is no longer maintained. This
+applies to all the components of this project:
+[Spideriment](https://github.com/vitlabuda/spideriment),
+[Spideriment Search Server](https://github.com/vitlabuda/spideriment_search_server)
+and [Spideriment Web Search](https://github.com/vitlabuda/spideriment_web_search).
 
+**However, the project has been rewritten from scratch as a whole, with many
+improvements in terms of the components' software design and architecture,
+features, configuration options, flexibility, extensibility and scalability:**
+- **[Spideriment-NG](https://github.com/vitlabuda/spideriment-ng)**
+- **[Spideriment-NG Search](https://github.com/vitlabuda/spideriment-ng-search)**
+- **[Spideriment-NG Docker](https://github.com/vitlabuda/spideriment-ng-docker)**
 
-
-## Usage
-
-### 1. Requirements
-   * **Linux**
-   * **Python 3.7+**
-   
-   The program was tested in Python 3.7 (Debian 10) and Python 3.8 (Ubuntu 20.04).
-
-
-### 2. Install Python dependencies
-   On Debian/Ubuntu and their derivatives, execute the following:
-   ```
-   sudo apt update 
-   sudo apt install python3 python3-pip python3-venv python3-virtualenv virtualenv
-   ```
-
-
-### 3. Change the configuration to fit your needs
-   The app's configuration can be changed in the **[Settings.py](src/Settings.py)** file.
-
-
-### 4. Initialize the app's environment
-   The bash script [prepare_web_search.sh](src/prepare_web_search.sh) creates a virtual environment and downloads the necessary Python libraries:
-   ```
-   ./prepare_web_search.sh
-   ```
-
-
-### 5. Start the Flask app
-   To start the web app using the Flask's built-in development server, use the [run_debug_web_search.sh](src/run_development_web_search.sh) bash script:
-   ```
-   ./run_debug_web_search.sh
-   ```
-
-   To run the app in a production environment, [hook it to a web server](https://flask.palletsprojects.com/en/latest/deploying/) using an appropriate interface.
-
-
-
-## Related projects
-* **[Spideriment](https://github.com/vitlabuda/spideriment)** – web crawler (spider, indexer)
-* **[Spideriment Search Server](https://github.com/vitlabuda/spideriment_search_server)** – search server for use by frontends
-
-
-
-## Licensing
-This project is licensed under the 3-clause BSD license. See the [LICENSE](LICENSE) file for details.
-
-Written by [Vít Labuda](https://vitlabuda.cz/).
+This repository's original _README_ file has been renamed to
+[README-old.md](README-old.md).
